@@ -43,13 +43,16 @@
                 const row = rows[i];
                 const removeButton = row.querySelector(".remove");
                 removeButton.onclick = function () {
-                    const catalogItemId = row.querySelector(".id").innerHTML;
+                    const res = confirm("Are you sure you want to remove this item?");
+                    if (res === true) {
+                        const catalogItemId = row.querySelector(".id").innerHTML;
 
-                    common.delete(settings.uri + "cart?u=" + encodeURIComponent(userId) + "&ci=" + encodeURIComponent(catalogItemId), function () {
-                        row.remove();
-                    }, function () {
-                        alert("Error while removing item from cart.");
-                    }, auth.token);
+                        common.delete(settings.uri + "cart?u=" + encodeURIComponent(userId) + "&ci=" + encodeURIComponent(catalogItemId), function () {
+                            row.remove();
+                        }, function () {
+                            alert("Error while removing item from cart.");
+                        }, auth.token);
+                    }
                 };
             }
 
