@@ -56,11 +56,11 @@ Here is a screenshot of the store page in the front end:
 
 ![Front end](https://www.codeproject.com/KB/cs/5271708/frontend.jpg)
 
-The back end allows admin users to see the available catalog items, allows to add new catalog items, and allows to remove catalog items.
+The back end allows admin users to see the available catalog items, allows to add new catalog items, allows to update catalog items, and allows to remove catalog items.
 
 Here is a screenshot of the store page in the back end:
 
-![Back end](https://www.codeproject.com/KB/cs/5271708/backend.jpg)
+![Back end](https://www.codeproject.com/KB/cs/5271708/backend.jpg?ref=1)
 
 # Source Code
 
