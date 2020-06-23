@@ -8,7 +8,7 @@
             "email": document.getElementById("email").value,
             "password": document.getElementById("password").value
         };
-        common.post(settings.uri + "identity/login?d=frontend", function (token) {
+        common.post(settings.uri + "identity/login", function (token) {
             const auth = {
                 "email": user.email,
                 "token": token
