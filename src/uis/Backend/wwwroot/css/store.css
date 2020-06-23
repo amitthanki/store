@@ -37,7 +37,7 @@
     background: #fafafa;
 }
 
-.add {
+.save {
     float: right;
 }
 
@@ -50,4 +50,8 @@
 
 .id {
     display: none;
+}
+
+.update{
+    margin-right: 5px;
 }
