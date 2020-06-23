@@ -95,9 +95,9 @@ You can access the back end from https://localhost:44301/.
 
 To login to the front end for the first time, just click on **Register** to create a new user and login.
 
-To login to the back end for the first time, you will need to create an admin user. To do so, open Postman and execute the following POST request https://localhost:44397/api/identity/register with the following payload:
+To login to the back end for the first time, you will need to create an admin user. To do so, open Postman and execute the following **POST** request https://localhost:44397/api/identity/register with the following payload:
 
-```js
+```json
 {
   "email": "admin@store.com",
   "password": "password",
