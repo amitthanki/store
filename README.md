@@ -4,14 +4,14 @@
 
 Microservices sample architecture using ASP.NET Core, Ocelot, MongoDB and JWT.
 
-# Development Environment
+## Development Environment
 
 - Visual Studio 2019
 - .NET Core 3.1
 - MongoDB
 - Postman
 
-# Architecture
+## Architecture
 
 ![Architecture](https://www.codeproject.com/KB/cs/5271708/architecture.jpg)
 
@@ -62,7 +62,7 @@ Here is a screenshot of the store page in the back end:
 
 ![Back end](https://www.codeproject.com/KB/cs/5271708/backend.jpg?ref=1)
 
-# Source Code
+## Source Code
 
 ![Source code](https://www.codeproject.com/KB/cs/5271708/solution.jpg)
 
@@ -77,7 +77,7 @@ Here is a screenshot of the store page in the back end:
 
 The source code is described on [CodeProject](https://www.codeproject.com/Articles/5271708/Microservices-using-ASP-NET-Core-Ocelot-MongoDB-an).
 
-# How to Run the Application
+## How to Run the Application
 
 You can run the application using IISExpress in Visual Studio 2019.
 
@@ -106,7 +106,7 @@ To login to the back end for the first time, you will need to create an admin us
 ```
 Finally, you can login to the back end with the admin user you created.
 
-# Further Reading
+## Further Reading
 
 - [Microservices architecture style](https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices)
 - [Health monitoring](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/monitor-app-health)
