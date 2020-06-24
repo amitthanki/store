@@ -7,9 +7,9 @@ namespace CatalogMicroservice.Repository
     public interface ICatalogRepository
     {
         List<CatalogItem> GetCatalogItems();
-        CatalogItem GetCatalogItem(Guid catagItemId);
+        CatalogItem GetCatalogItem(Guid catalogItemId);
         void InsertCatalogItem(CatalogItem catalogItem);
         void UpdateCatalogItem(CatalogItem catalogItem);
-        void DeleteCatalogItem(Guid catagItemId);
+        void DeleteCatalogItem(Guid catalogItemId);
     }
 }
