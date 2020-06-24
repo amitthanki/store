@@ -15,35 +15,24 @@ namespace CatalogMicroservice.Repository
             _col = db.GetCollection<CatalogItem>(CatalogItem.DocumentName);
         }
 
-        public IEnumerable<CatalogItem> GetCatalogItems()
-        {
-            var catalogItems = _col.Find(FilterDefinition<CatalogItem>.Empty).ToEnumerable();
-            return catalogItems;
-        }
+        public List<CatalogItem> GetCatalogItems() =>
+            _col.Find(FilterDefinition<CatalogItem>.Empty).ToList();
 
-        public CatalogItem GetCatalogItem(Guid catalogItemId)
-        {
-            var catalogItem = _col.Find(c => c.Id == catalogItemId).FirstOrDefault();
-            return catalogItem;
-        }
 
-        public void InsertCatalogItem(CatalogItem catalogItem)
-        {
+        public CatalogItem GetCatalogItem(Guid catalogItemId) =>
+            _col.Find(c => c.Id == catalogItemId).FirstOrDefault();
+
+
+        public void InsertCatalogItem(CatalogItem catalogItem) =>
             _col.InsertOne(catalogItem);
-        }
 
-        public void UpdateCatalogItem(CatalogItem catalogItem)
-        {
-            var update = Builders<CatalogItem>.Update
-                    .Set(c => c.Name, catalogItem.Name)
-                    .Set(c => c.Description, catalogItem.Description)
-                    .Set(c => c.Price, catalogItem.Price);
-            _col.UpdateOne(c => c.Id == catalogItem.Id, update);
-        }
+        public void UpdateCatalogItem(CatalogItem catalogItem) =>
+            _col.UpdateOne(c => c.Id == catalogItem.Id, Builders<CatalogItem>.Update
+                .Set(c => c.Name, catalogItem.Name)
+                .Set(c => c.Description, catalogItem.Description)
+                .Set(c => c.Price, catalogItem.Price));
 
-        public void DeleteCatalogItem(Guid catalogItemId)
-        {
+        public void DeleteCatalogItem(Guid catalogItemId) =>
             _col.DeleteOne(c => c.Id == catalogItemId);
-        }
     }
 }
