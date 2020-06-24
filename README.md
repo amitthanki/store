@@ -17,7 +17,7 @@ API gateways are entry points for clients. Instead of calling services directly,
 
 ## Architecture
 
-![Architecture](https://www.codeproject.com/KB/cs/5271708/architecture.jpg)
+![Architecture](https://www.codeproject.com/KB/cs/5271708/architecture.jpg?ref=1)
 
 There are three microservices:
 
