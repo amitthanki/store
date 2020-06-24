@@ -1,7 +1,6 @@
 ﻿using CartMicroservice.Model;
 using CartMicroservice.Repository;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Driver;
 using System;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
