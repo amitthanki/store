@@ -104,7 +104,7 @@ To login to the back end for the first time, you will need to create an admin us
 ```json
 {
   "email": "admin@store.com",
-  "password": "password",
+  "password": "pass",
   "isAdmin": true
 }
 ```
