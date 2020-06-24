@@ -1,3 +1,4 @@
+using IdentityMicroservice.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -5,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Middleware;
+using MongoDB.Driver;
 
 namespace IdentityMicroservice
 {
@@ -22,6 +24,7 @@ namespace IdentityMicroservice
         {
             services.AddControllers();
             services.AddMongoDb(Configuration);
+            services.AddSingleton<IUserRepository>(sp => new UserRepository(sp.GetService<IMongoDatabase>()));
             services.AddJwt(Configuration);
             services.AddTransient<IEncryptor, Encryptor>();
             services.AddSwaggerGen(c =>

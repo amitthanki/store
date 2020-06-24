@@ -16,9 +16,9 @@ namespace IdentityMicroservice.Controllers
         private readonly IJwtBuilder _jwtBuilder;
         private readonly IEncryptor _encryptor;
 
-        public IdentityController(IMongoDatabase db, IJwtBuilder jwtBuilder, IEncryptor encryptor)
+        public IdentityController(IUserRepository userRepository, IJwtBuilder jwtBuilder, IEncryptor encryptor)
         {
-            _userRepository = new UserRepository(db);
+            _userRepository = userRepository;
             _jwtBuilder = jwtBuilder;
             _encryptor = encryptor;
         }
