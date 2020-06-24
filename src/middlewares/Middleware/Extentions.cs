@@ -12,16 +12,16 @@ namespace Middleware
         public static void AddMongoDb(this IServiceCollection services, IConfiguration configuration)
         {
             services.Configure<MongoOptions>(configuration.GetSection("mongo"));
-            services.AddSingleton(c =>
+            services.AddSingleton(sp =>
             {
-                var options = c.GetService<IOptions<MongoOptions>>();
+                var options = sp.GetService<IOptions<MongoOptions>>();
 
                 return new MongoClient(options.Value.ConnectionString);
             });
-            services.AddSingleton(c =>
+            services.AddSingleton(sp =>
             {
-                var options = c.GetService<IOptions<MongoOptions>>();
-                var client = c.GetService<MongoClient>();
+                var options = sp.GetService<IOptions<MongoOptions>>();
+                var client = sp.GetService<MongoClient>();
 
                 return client.GetDatabase(options.Value.Database);
             });

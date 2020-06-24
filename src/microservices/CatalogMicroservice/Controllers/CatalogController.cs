@@ -14,9 +14,9 @@ namespace CatalogMicroservice.Controllers
     {
         private readonly ICatalogRepository _catalogRepository;
 
-        public CatalogController(IMongoDatabase db)
+        public CatalogController(ICatalogRepository catalogRepository)
         {
-            _catalogRepository = new CatalogRepository(db);
+            _catalogRepository = catalogRepository;
         }
 
         // GET: api/<CatalogController>

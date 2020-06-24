@@ -1,3 +1,4 @@
+using CatalogMicroservice.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -5,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Middleware;
+using MongoDB.Driver;
 
 namespace CatalogMicroservice
 {
@@ -22,6 +24,7 @@ namespace CatalogMicroservice
         {
             services.AddControllers();
             services.AddMongoDb(Configuration);
+            services.AddSingleton<ICatalogRepository>(sp => new CatalogRepository(sp.GetService<IMongoDatabase>()));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Catalog", Version = "v1" });
