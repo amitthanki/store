@@ -1,3 +1,4 @@
+using CartMicroservice.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -5,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Middleware;
+using MongoDB.Driver;
 
 namespace CartMicroservice
 {
@@ -22,6 +24,7 @@ namespace CartMicroservice
         {
             services.AddControllers();
             services.AddMongoDb(Configuration);
+            services.AddSingleton<ICartRepository>(sp => new CartRepository(sp.GetService<IMongoDatabase>()));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Cart", Version = "v1" });

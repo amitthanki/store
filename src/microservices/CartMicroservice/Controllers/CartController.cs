@@ -14,9 +14,9 @@ namespace CartMicroservice.Controllers
     {
         private readonly ICartRepository _cartRepository;
 
-        public CartController(IMongoDatabase db)
+        public CartController(ICartRepository cartRepository)
         {
-            _cartRepository = new CartRepository(db);
+            _cartRepository = cartRepository;
         }
 
         // GET: api/<CartController>
