@@ -15,6 +15,18 @@ API gateways are entry points for clients. Instead of calling services directly,
 - MongoDB
 - Postman
 
+## Technologies
+
+- C#
+- ASP.NET Core
+- Ocelot
+- Swashbuckle
+- JWT
+- MongoDB
+- HTML
+- CSS
+- JavaScript
+
 ## Architecture
 
 ![Architecture](https://www.codeproject.com/KB/cs/5271708/architecture.jpg?ref=1)
