@@ -108,6 +108,9 @@ To login to the back end for the first time, you will need to create an admin us
   "isAdmin": true
 }
 ```
+
+You can also create the admin user using Swagger UI: https://localhost:44397/swagger
+
 Finally, you can login to the back end with the admin user you created.
 
 ## Further Reading
