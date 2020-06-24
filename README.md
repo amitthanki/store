@@ -8,6 +8,26 @@ A microservices architecture consists of a collection of small, independent, and
 
 API gateways are entry points for clients. Instead of calling services directly, clients call the API gateway, which forwards the call to the appropriate services.
 
+There are multiple advantages using microservices architecture:
+
+- Developers can better understand the functionality of a service.
+- Failure in one service does not impact other services.
+- It's easier to manage bug fixes and feature releases.
+- Services can be deployed in multiple servers to enhance performance.
+- Services are easy to change and test.
+- Services are easy and fast to deploy.
+- Allows to choose technology that is suited for a particular functionality.
+
+Before choosing microservices architecture, here are some challenges to consider:
+
+- Services are simple but the entire system as a whole is more complex.
+- Communication between services can be complex.
+- More services equals more resources.
+- Global testing can be difficult.
+- Debugging can be harder.
+
+Microservices architecture is great for large companies, but can be complicated for small companies who need to create and iterate quickly, and don't want to get into complex orchestration.
+
 ## Development Environment
 
 - Visual Studio 2019
