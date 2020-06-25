@@ -2,6 +2,7 @@
 using CatalogMicroservice.Repository;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,23 +21,23 @@ namespace CatalogMicroservice.Controllers
 
         // GET: api/<CatalogController>
         [HttpGet]
-        public IActionResult Get()
+        public ActionResult<IEnumerable<CatalogItem>> Get()
         {
             var catalogItems = _catalogRepository.GetCatalogItems();
-            return new OkObjectResult(catalogItems);
+            return Ok(catalogItems);
         }
 
         // GET api/<CatalogController>/110ec627-2f05-4a7e-9a95-7a91e8005da8
         [HttpGet("{id}")]
-        public IActionResult Get(Guid id)
+        public ActionResult<CatalogItem> Get(Guid id)
         {
             var catalogItem = _catalogRepository.GetCatalogItem(id);
-            return new OkObjectResult(catalogItem);
+            return Ok(catalogItem);
         }
 
         // POST api/<CatalogController>
         [HttpPost]
-        public IActionResult Post([FromBody] CatalogItem catalogItem)
+        public ActionResult Post([FromBody] CatalogItem catalogItem)
         {
             _catalogRepository.InsertCatalogItem(catalogItem);
             return CreatedAtAction(nameof(Get), new { id = catalogItem.Id }, catalogItem);
@@ -44,7 +45,7 @@ namespace CatalogMicroservice.Controllers
 
         // PUT api/<CatalogController>
         [HttpPut]
-        public IActionResult Put([FromBody] CatalogItem catalogItem)
+        public ActionResult Put([FromBody] CatalogItem catalogItem)
         {
             if (catalogItem != null)
             {
@@ -56,7 +57,7 @@ namespace CatalogMicroservice.Controllers
 
         // DELETE api/<CatalogController>/110ec627-2f05-4a7e-9a95-7a91e8005da8
         [HttpDelete("{id}")]
-        public IActionResult Delete(Guid id)
+        public ActionResult Delete(Guid id)
         {
             _catalogRepository.DeleteCatalogItem(id);
             return new OkResult();
