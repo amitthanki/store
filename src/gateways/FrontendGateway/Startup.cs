@@ -66,6 +66,8 @@ namespace FrontendGateway
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseMiddleware<RequestResponseLoggingMiddleware>();
+
             app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
