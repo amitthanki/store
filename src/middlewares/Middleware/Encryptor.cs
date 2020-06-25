@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 
 namespace Middleware
 {
-    public class Encryptor: IEncryptor
+    public class Encryptor : IEncryptor
     {
         private static readonly int saltSize = 40;
         private static readonly int iterationsCount = 10000;
@@ -26,7 +26,7 @@ namespace Middleware
 
         private static byte[] GetBytes(string value)
         {
-            var bytes = new byte[value.Length + sizeof(char)];
+            var bytes = new byte[value.Length * sizeof(char)];
             Buffer.BlockCopy(value.ToCharArray(), 0, bytes, 0, bytes.Length);
 
             return bytes;
