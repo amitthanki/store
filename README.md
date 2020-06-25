@@ -41,6 +41,7 @@ Microservices architecture is great for large companies, but can be complicated 
 - ASP.NET Core
 - Ocelot
 - Swashbuckle
+- Serilog
 - JWT
 - MongoDB
 - HTML
