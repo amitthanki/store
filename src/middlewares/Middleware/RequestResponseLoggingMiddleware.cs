@@ -57,7 +57,7 @@ namespace Middleware
                 detectEncodingFromByteOrderMarks: false,
                 leaveOpen: true);
             var body = await reader.ReadToEndAsync();
-            var formattedRequest = $"{request.Scheme}://{request.Host}{request.Path}/{request.QueryString} {body}";
+            var formattedRequest = $"{request.Method} {request.Scheme}://{request.Host}{request.Path}/{request.QueryString} {body}";
             request.Body.Position = 0;
             return formattedRequest;
         }
