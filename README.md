@@ -54,11 +54,11 @@ Microservices architecture is great for large companies, but can be complicated 
 
 There are three microservices:
 
-- **CatalogMicroservice**: allows to manage the catalog.
-- **CartMicroservice**: allows to manage the cart.
-- **IdentityMicroservice**: allows to manage users.
+- **Catalog microservice**: allows to manage the catalog.
+- **Cart microservice**: allows to manage the cart.
+- **Identity microservice**: allows to manage users.
 
-Each microservice implements a single businness capability and has its own MongoDB database.
+Each microservice implements a single business capability and has its own MongoDB database.
 
 There are two API gateways, one for the front end and one for the back end.
 
