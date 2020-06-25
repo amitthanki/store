@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6B5B980E-241
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogMicroservice.UnitTests", "tests\CatalogMicroservice.UnitTests\CatalogMicroservice.UnitTests.csproj", "{A876249B-0D6E-4E40-A1A6-39AC053C0325}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartMicroservice.UnitTests", "tests\CartMicroservice.UnitTests\CartMicroservice.UnitTests.csproj", "{07EC8540-BE98-48A7-B7FF-E4016378EDCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{A876249B-0D6E-4E40-A1A6-39AC053C0325}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A876249B-0D6E-4E40-A1A6-39AC053C0325}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A876249B-0D6E-4E40-A1A6-39AC053C0325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07EC8540-BE98-48A7-B7FF-E4016378EDCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07EC8540-BE98-48A7-B7FF-E4016378EDCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07EC8540-BE98-48A7-B7FF-E4016378EDCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07EC8540-BE98-48A7-B7FF-E4016378EDCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +99,7 @@ Global
 		{095206CA-32C7-4415-A293-6A69C159ACED} = {01D6C88F-A520-47DA-AF60-9EFE7A5219A9}
 		{1A500C34-010C-4266-892A-9DBD5CC17716} = {444FF656-C3D5-4386-B766-5661F056B89C}
 		{A876249B-0D6E-4E40-A1A6-39AC053C0325} = {D8D31706-9E24-4547-AA52-99A9C3816B8F}
+		{07EC8540-BE98-48A7-B7FF-E4016378EDCA} = {D8D31706-9E24-4547-AA52-99A9C3816B8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5F89C23B-F2C3-4A6C-87EA-42BAC92EC09F}
