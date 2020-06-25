@@ -66,6 +66,8 @@ namespace BackendGateway
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseMiddleware<RequestResponseLoggingMiddleware>();
+
             app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
