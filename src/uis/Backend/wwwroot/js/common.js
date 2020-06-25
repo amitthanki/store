@@ -1,6 +1,6 @@
 ﻿const common = {
     post: function (url, callback, errorCallback, content, token) {
-        var xmlhttp = new XMLHttpRequest();
+        const xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
             if (this.readyState === 4 && (this.status === 200 || this.status === 201) && callback) {
                 callback(this.responseText);
@@ -21,7 +21,7 @@
         xmlhttp.send(JSON.stringify(content));
     },
     put: function (url, callback, errorCallback, content, token) {
-        var xmlhttp = new XMLHttpRequest();
+        const xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
             if (this.readyState === 4 && (this.status === 200 || this.status === 201) && callback) {
                 callback(this.responseText);
@@ -42,7 +42,7 @@
         xmlhttp.send(JSON.stringify(content));
     },
     get: function (url, callback, errorCallback, token) {
-        var xmlhttp = new XMLHttpRequest();
+        const xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200 && callback) {
                 callback(this.responseText);
@@ -62,7 +62,7 @@
         xmlhttp.send();
     },
     delete: function (url, callback, errorCallback, token) {
-        var xmlhttp = new XMLHttpRequest();
+        const xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200 && callback) {
                 callback(this.responseText);
