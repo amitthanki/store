@@ -18,6 +18,5 @@ namespace IdentityMicroservice.Repository
 
         public void InsertUser(User user) =>
             _col.InsertOne(user);
-
     }
 }
