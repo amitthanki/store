@@ -41,6 +41,7 @@ Microservices architecture is great for large companies, but can be complicated 
 - ASP.NET Core
 - Ocelot
 - Swashbuckle
+- Serilog
 - JWT
 - MongoDB
 - HTML
@@ -81,7 +82,6 @@ Below is the back end API gateway:
 - **PUT /catalog**: updates a catalog item.
 - **DELETE /catalog**: deletes a catalog item.
 - **POST /identity/login**: performs a login.
-- **POST /identity/register**: registers a user.
 - **GET /identity/validate**: validates a JWT token.
 
 Finally, there are two client apps. A front end for accessing the store and a back end for managing the store.
