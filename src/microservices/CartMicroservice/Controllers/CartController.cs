@@ -2,6 +2,7 @@
 using CartMicroservice.Repository;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,34 +21,34 @@ namespace CartMicroservice.Controllers
 
         // GET: api/<CartController>
         [HttpGet]
-        public IActionResult Get([FromQuery(Name = "u")] Guid userId)
+        public ActionResult<IEnumerable<CartItem>> Get([FromQuery(Name = "u")] Guid userId)
         {
             var cartItems = _cartRepository.GetCartItems(userId);
-            return new OkObjectResult(cartItems);
+            return Ok(cartItems);
         }
 
         // POST api/<CartController>
         [HttpPost]
-        public IActionResult Post([FromQuery(Name = "u")] Guid userId, [FromBody] CartItem cartItem)
+        public ActionResult Post([FromQuery(Name = "u")] Guid userId, [FromBody] CartItem cartItem)
         {
             _cartRepository.InsertCartItem(userId, cartItem);
-            return new OkResult();
+            return Ok();
         }
 
         // PUT api/<CartController>
         [HttpPut]
-        public IActionResult Put([FromQuery(Name = "u")] Guid userId, [FromBody] CartItem cartItem)
+        public ActionResult Put([FromQuery(Name = "u")] Guid userId, [FromBody] CartItem cartItem)
         {
             _cartRepository.UpdateCartItem(userId, cartItem);
-            return new OkResult();
+            return Ok();
         }
 
         // DELETE api/<CartController>
         [HttpDelete]
-        public IActionResult Delete([FromQuery(Name = "u")] Guid userId, [FromQuery(Name = "ci")] Guid cartItemId)
+        public ActionResult Delete([FromQuery(Name = "u")] Guid userId, [FromQuery(Name = "ci")] Guid cartItemId)
         {
             _cartRepository.DeleteCartItem(userId, cartItemId);
-            return new OkResult();
+            return Ok();
         }
     }
 }

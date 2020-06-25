@@ -14,10 +14,10 @@ namespace CatalogMicroservice.UnitTests
     {
         private readonly CatalogController _controller;
         private readonly List<CatalogItem> _items = new List<CatalogItem>
-            {
-                new CatalogItem { Id = new Guid("ce2dbb82-6689-487b-9691-0a05ebabce4a"), Name = "Samsung Galaxy S10", Description = "Samsung Galaxy S10 mobile phone", Price= 1000 },
-                new CatalogItem { Id = new Guid("13b87ba8-f542-441c-bc2c-db32fb01ec3f"), Name = "Samsung Galaxy S9", Description = "Samsung Galaxy S9 mobile phone", Price= 700 }
-            };
+        {
+            new CatalogItem { Id = new Guid("ce2dbb82-6689-487b-9691-0a05ebabce4a"), Name = "Samsung Galaxy S10", Description = "Samsung Galaxy S10 mobile phone", Price= 1000 },
+            new CatalogItem { Id = new Guid("13b87ba8-f542-441c-bc2c-db32fb01ec3f"), Name = "Samsung Galaxy S9", Description = "Samsung Galaxy S9 mobile phone", Price= 700 }
+        };
 
         public CatalogControllerTest()
         {
