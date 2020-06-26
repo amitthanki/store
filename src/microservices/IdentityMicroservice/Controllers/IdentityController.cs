@@ -2,6 +2,7 @@
 using IdentityMicroservice.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Middleware;
+using System;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -23,7 +24,7 @@ namespace IdentityMicroservice.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromBody] User user, [FromQuery(Name = "d")] string destination = "frontend")
+        public ActionResult<string> Login([FromBody] User user, [FromQuery(Name = "d")] string destination = "frontend")
         {
             var u = _userRepository.GetUser(user.Email);
 
@@ -46,11 +47,11 @@ namespace IdentityMicroservice.Controllers
 
             var token = _jwtBuilder.GetToken(u.Id);
 
-            return new OkObjectResult(token);
+            return Ok(token);
         }
 
         [HttpPost("register")]
-        public IActionResult Register([FromBody] User user)
+        public ActionResult Register([FromBody] User user)
         {
             var u = _userRepository.GetUser(user.Email);
 
@@ -66,7 +67,7 @@ namespace IdentityMicroservice.Controllers
         }
 
         [HttpGet("validate")]
-        public IActionResult Validate([FromQuery(Name = "email")] string email, [FromQuery(Name = "token")] string token)
+        public ActionResult<Guid> Validate([FromQuery(Name = "email")] string email, [FromQuery(Name = "token")] string token)
         {
             var u = _userRepository.GetUser(email);
 
@@ -82,7 +83,7 @@ namespace IdentityMicroservice.Controllers
                 return BadRequest("Invalid token.");
             }
 
-            return new OkObjectResult(userId);
+            return Ok(userId);
         }
     }
 }
