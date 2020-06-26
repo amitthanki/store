@@ -101,6 +101,10 @@ namespace CartMicroservice.UnitTests
             var cart = _carts.First(c => c.UserId == userId);
             var ci = cart.CartItems.FirstOrDefault(i => i.CatalogItemId == cartItem.CatalogItemId);
             Assert.NotNull(ci);
+            Assert.Equal(1, ci.Quantity);
+            okResult = _controller.Post(userId, cartItem);
+            Assert.IsType<OkResult>(okResult);
+            Assert.Equal(2, ci.Quantity);
         }
 
         [Fact]
