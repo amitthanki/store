@@ -1,4 +1,3 @@
-[![.NET Core](https://github.com/aelassas/store/workflows/.NET%20Core/badge.svg)](https://github.com/aelassas/store/actions?query=workflow%3A%22.NET+Core%22)
 [![Build Status](https://aelassas.visualstudio.com/store/_apis/build/status/aelassas.store?branchName=master)](https://aelassas.visualstudio.com/store/_build/latest?definitionId=2&branchName=master)
 [![Azure DevOps tests](https://img.shields.io/azure-devops/tests/aelassas/store/2?logo=azure-pipelines)](https://aelassas.visualstudio.com/store/_build/latest?definitionId=2&branchName=master)
 
