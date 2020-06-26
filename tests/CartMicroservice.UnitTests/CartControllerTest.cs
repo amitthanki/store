@@ -78,7 +78,6 @@ namespace CartMicroservice.UnitTests
                 }
             });
             _controller = new CartController(mockRepo.Object);
-
         }
 
         [Fact]
