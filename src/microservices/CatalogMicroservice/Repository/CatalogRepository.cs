@@ -18,10 +18,8 @@ namespace CatalogMicroservice.Repository
         public List<CatalogItem> GetCatalogItems() =>
             _col.Find(FilterDefinition<CatalogItem>.Empty).ToList();
 
-
         public CatalogItem GetCatalogItem(Guid catalogItemId) =>
             _col.Find(c => c.Id == catalogItemId).FirstOrDefault();
-
 
         public void InsertCatalogItem(CatalogItem catalogItem) =>
             _col.InsertOne(catalogItem);
