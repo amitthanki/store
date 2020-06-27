@@ -3,7 +3,7 @@
 
 ## Microservices Architecture
 
-![Microservices Architecture](https://www.codeproject.com/KB/cs/5271708/microservices-logical.png)
+![Microservices Architecture](https://www.codeproject.com/KB/aspnet/5271708/microservices-logical.png)
 
 A microservices architecture consists of a collection of small, independent, and loosely coupled services. Each service is self-contained, implements a single business capability, is responsible for persisting its own data, is a separate codebase, and can be deployed independently.
 
@@ -53,7 +53,7 @@ Microservices architecture is great for large companies, but can be complicated 
 
 ## Architecture
 
-![Architecture](https://www.codeproject.com/KB/cs/5271708/architecture.jpg?ref=1)
+![Architecture](https://www.codeproject.com/KB/aspnet/5271708/architecture.jpg)
 
 There are three microservices:
 
@@ -93,13 +93,13 @@ The front end allows registered users to see the available catalog items, allows
 
 Here is a screenshot of the store page in the front end:
 
-![Front end](https://www.codeproject.com/KB/cs/5271708/frontend.jpg)
+![Front end](https://www.codeproject.com/KB/aspnet/5271708/frontend.jpg)
 
 The back end allows admin users to see the available catalog items, allows to add new catalog items, allows to update catalog items, and allows to remove catalog items.
 
 Here is a screenshot of the store page in the back end:
 
-![Back end](https://www.codeproject.com/KB/cs/5271708/backend.jpg?ref=1)
+![Back end](https://www.codeproject.com/KB/aspnet/5271708/backend.jpg)
 
 ## Source Code
 
@@ -125,7 +125,7 @@ You will need to install MongoDB if it is not installed.
 
 First, right click on the solution, click on properties and select multiple startup projects. Select all the projects as startup projects except Middleware project:
 
-![vs](https://www.codeproject.com/KB/cs/5271708/vs-startup.jpg)
+![vs](https://www.codeproject.com/KB/aspnet/5271708/vs-startup.jpg)
 
 Then, press **F5** to run the application.
 
