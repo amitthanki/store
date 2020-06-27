@@ -5,7 +5,7 @@
 
 ![Microservices Architecture](https://www.codeproject.com/KB/cs/5271708/microservices-logical.png)
 
-A microservices architecture consists of a collection of small, independent, and loosely coupled services. Each service is self-contained, implements a single business capability, is responsible for persisting his own data, is a separate codebase, and can be deployed independently.
+A microservices architecture consists of a collection of small, independent, and loosely coupled services. Each service is self-contained, implements a single business capability, is responsible for persisting its own data, is a separate codebase, and can be deployed independently.
 
 API gateways are entry points for clients. Instead of calling services directly, clients call the API gateway, which forwards the call to the appropriate services.
 
