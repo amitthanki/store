@@ -119,7 +119,7 @@ The source code is described on [CodeProject](https://www.codeproject.com/Articl
 
 ## How to Run the Application
 
-You can run the application using IISExpress in Visual Studio 2019.
+You can run the application using IISExpress or Docker in Visual Studio 2019.
 
 You will need to install MongoDB if it is not installed.
 
