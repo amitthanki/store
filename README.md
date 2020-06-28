@@ -83,7 +83,7 @@ Below is the back end API gateway:
 - **GET /catalog/{id}**: retrieves a catalog item.
 - **POST /catalog**: creates a catalog item.
 - **PUT /catalog**: updates a catalog item.
-- **DELETE /catalog**: deletes a catalog item.
+- **DELETE /catalog/{id}**: deletes a catalog item.
 - **POST /identity/login**: performs a login.
 - **GET /identity/validate**: validates a JWT token.
 
