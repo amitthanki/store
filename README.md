@@ -103,7 +103,7 @@ Here is a screenshot of the store page in the back end:
 
 ## Source Code
 
-![Source code](https://www.codeproject.com/KB/aspnet/5271708/solution.jpg)
+![Source code](https://www.codeproject.com/KB/aspnet/5271708/solution.jpg?ref=1)
 
 - **CatalogMicroservice** project contains the source code of the microservice managing the catalog.
 - **CartMicroservice** project contains the source code of the microservice managing the cart.
@@ -113,7 +113,7 @@ Here is a screenshot of the store page in the back end:
 - **BackendGateway** project contains the source code of the back end API gateway.
 - **Frontend** project contains the source code of the front end client app.
 - **Backend** project contains the source code of the back end client app.
-- **tests** solution folder contains unit tests of all microservices.
+- **test** solution folder contains unit tests of all microservices.
 
 The source code is described on [CodeProject](https://www.codeproject.com/Articles/5271708/Microservices-using-ASP-NET-Core-Ocelot-MongoDB-an).
 
