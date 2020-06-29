@@ -27,15 +27,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend", "src\uis\Backend\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Middleware", "src\middlewares\Middleware\Middleware.csproj", "{1A500C34-010C-4266-892A-9DBD5CC17716}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D8D31706-9E24-4547-AA52-99A9C3816B8F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D8D31706-9E24-4547-AA52-99A9C3816B8F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6B5B980E-2411-4CD7-A926-4F4DB5153A98}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogMicroservice.UnitTests", "tests\CatalogMicroservice.UnitTests\CatalogMicroservice.UnitTests.csproj", "{A876249B-0D6E-4E40-A1A6-39AC053C0325}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogMicroservice.UnitTests", "test\CatalogMicroservice.UnitTests\CatalogMicroservice.UnitTests.csproj", "{A876249B-0D6E-4E40-A1A6-39AC053C0325}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartMicroservice.UnitTests", "tests\CartMicroservice.UnitTests\CartMicroservice.UnitTests.csproj", "{07EC8540-BE98-48A7-B7FF-E4016378EDCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartMicroservice.UnitTests", "test\CartMicroservice.UnitTests\CartMicroservice.UnitTests.csproj", "{07EC8540-BE98-48A7-B7FF-E4016378EDCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityMicroservice.UnitTests", "tests\IdentityMicroservice.UnitTests\IdentityMicroservice.UnitTests.csproj", "{D4DA4F91-1ADB-451F-A73D-033C73D9C7A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityMicroservice.UnitTests", "test\IdentityMicroservice.UnitTests\IdentityMicroservice.UnitTests.csproj", "{D4DA4F91-1ADB-451F-A73D-033C73D9C7A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
