@@ -45,9 +45,9 @@ namespace CartMicroservice.Controllers
 
         // DELETE api/<CartController>
         [HttpDelete]
-        public ActionResult Delete([FromQuery(Name = "u")] Guid userId, [FromQuery(Name = "ci")] Guid cartItemId)
+        public ActionResult Delete([FromQuery(Name = "u")] Guid userId, [FromQuery(Name = "ci")] Guid catalogItemId)
         {
-            _cartRepository.DeleteCartItem(userId, cartItemId);
+            _cartRepository.DeleteCartItem(userId, catalogItemId);
             return Ok();
         }
     }
