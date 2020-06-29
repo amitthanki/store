@@ -20,7 +20,8 @@ namespace BackendGateway
                 config
                     .SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
                     .AddJsonFile("appsettings.json", true, true)
-                    .AddJsonFile("ocelot.json", optional: false, reloadOnChange: true)
+                    .AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true)
+                    .AddJsonFile($"configuration.{hostingContext.HostingEnvironment.EnvironmentName}.json", optional: false, reloadOnChange: true)
                     .AddEnvironmentVariables();
             })
             .ConfigureWebHostDefaults(webBuilder =>

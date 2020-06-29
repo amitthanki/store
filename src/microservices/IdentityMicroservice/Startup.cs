@@ -66,8 +66,6 @@ namespace IdentityMicroservice
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Identity V1");
             });
 
-            app.UseHttpsRedirection();
-
             app.UseRouting();
 
             app.UseAuthorization();

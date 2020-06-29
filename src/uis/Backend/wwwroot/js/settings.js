@@ -1,3 +1,3 @@
 ﻿const settings = {
-    uri: "https://localhost:44359/"
+    uri: "http://" + window.location.hostname + ":44359/"
 };

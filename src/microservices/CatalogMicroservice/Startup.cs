@@ -64,8 +64,6 @@ namespace CatalogMicroservice
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Catalog V1");
             });
 
-            app.UseHttpsRedirection();
-
             app.UseRouting();
 
             app.UseAuthorization();

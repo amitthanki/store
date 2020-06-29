@@ -2,11 +2,11 @@
   "Routes": [
     {
       "DownstreamPathTemplate": "/api/catalog",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44326
+          "Host": "catalog",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/catalog",
@@ -18,11 +18,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/catalog/{id}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44326
+          "Host": "catalog",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/catalog/{id}",
@@ -34,11 +34,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/cart",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44388
+          "Host": "cart",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/cart",
@@ -50,11 +50,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/identity/login",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44397
+          "Host": "identity",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/identity/login",
@@ -62,11 +62,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/identity/register",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44397
+          "Host": "identity",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/identity/register",
@@ -74,11 +74,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/identity/validate",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 44397
+          "Host": "identity",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/identity/validate",
@@ -86,6 +86,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:44300"
+    "BaseUrl": "http://localhost:44300"
   }
 }

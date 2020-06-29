@@ -64,8 +64,6 @@ namespace CartMicroservice
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Cart V1");
             });
 
-            app.UseHttpsRedirection();
-
             app.UseRouting();
 
             app.UseAuthorization();
