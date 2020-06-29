@@ -1,8 +1,11 @@
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Middleware;
@@ -56,6 +59,14 @@ namespace FrontendGateway
                         .AllowAnyMethod()
                         .AllowAnyHeader());
             });
+
+            services.AddHealthChecks()
+                .AddMongoDb(
+                mongodbConnectionString: Configuration.GetSection("mongo").Get<MongoOptions>().ConnectionString,
+                name: "mongo",
+                failureStatus: HealthStatus.Unhealthy
+                );
+            services.AddHealthChecksUI().AddInMemoryStorage();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,6 +76,14 @@ namespace FrontendGateway
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseHealthChecks("/healthz", new HealthCheckOptions()
+            {
+                Predicate = _ => true,
+                ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+            });
+
+            app.UseHealthChecksUI();
 
             app.UseMiddleware<RequestResponseLoggingMiddleware>();
 
