@@ -119,7 +119,7 @@ The source code is described on [CodeProject](https://www.codeproject.com/Articl
 
 ## How to Run the Application
 
-You can run the application using IISExpress or Docker in Visual Studio 2019.
+You can run the application using IISExpress in Visual Studio 2019.
 
 You will need to install MongoDB if it is not installed.
 
@@ -148,6 +148,28 @@ To login to the back end for the first time, you will need to create an admin us
 You can also create the admin user using Swagger UI: https://localhost:44397/swagger
 
 Finally, you can login to the back end with the admin user you created.
+
+## How to Deploy the Application
+
+You can deploy the application using Docker containers on Linux distributions.
+
+You will need to install Docker if it is not installed. 
+
+First, copy the source code to a folder on your Linux machine.
+
+Then open a terminal, go to that folder and run the following command:
+
+```
+docker-compose up
+```
+
+That's it, the application will be deployed and will run.
+
+Then, you can access the front end from http://host-ip:44317/ and the back end from http://host-ip:44301/.
+
+Here is a screenshot of the application running on Ubuntu:
+
+![Docker](https://www.codeproject.com/KB/aspnet/5271708/docker.png)
 
 ## Further Reading
 
