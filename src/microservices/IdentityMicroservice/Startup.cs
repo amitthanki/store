@@ -1,8 +1,11 @@
+using HealthChecks.UI.Client;
 using IdentityMicroservice.Repository;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Middleware;
@@ -31,6 +34,13 @@ namespace IdentityMicroservice
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Identity", Version = "v1" });
             });
+            services.AddHealthChecks()
+                .AddMongoDb(
+                mongodbConnectionString: Configuration.GetSection("mongo").Get<MongoOptions>().ConnectionString,
+                name: "mongo",
+                failureStatus: HealthStatus.Unhealthy
+                );
+            services.AddHealthChecksUI().AddInMemoryStorage();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +50,14 @@ namespace IdentityMicroservice
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseHealthChecks("/healthz", new HealthCheckOptions()
+            {
+                Predicate = _ => true,
+                ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+            });
+
+            app.UseHealthChecksUI();
 
             app.UseSwagger();
 
