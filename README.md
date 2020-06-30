@@ -153,7 +153,7 @@ Finally, you can login to the back end with the admin user you created.
 
 You can deploy the application using Docker containers on Linux distributions.
 
-You will need to install Docker if it is not installed. 
+You will need to install Docker and Docker Compose if they are not installed. 
 
 First, copy the source code to a folder on your Linux machine.
 
