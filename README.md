@@ -129,13 +129,13 @@ First, right click on the solution, click on properties and select multiple star
 
 Then, press **F5** to run the application.
 
-You can access the front end from https://localhost:44317/.
+You can access the front end from http://localhost:44317/.
 
-You can access the back end from https://localhost:44301/.
+You can access the back end from http://localhost:44301/.
 
 To login to the front end for the first time, just click on **Register** to create a new user and login.
 
-To login to the back end for the first time, you will need to create an admin user. To do so, open Postman and execute the following **POST** request https://localhost:44397/api/identity/register with the following payload:
+To login to the back end for the first time, you will need to create an admin user. To do so, open Postman and execute the following **POST** request http://localhost:44397/api/identity/register with the following payload:
 
 ```json
 {
@@ -145,7 +145,7 @@ To login to the back end for the first time, you will need to create an admin us
 }
 ```
 
-You can also create the admin user using Swagger UI: https://localhost:44397/swagger
+You can also create the admin user using Swagger UI: http://localhost:44397/swagger
 
 Finally, you can login to the back end with the admin user you created.
 
