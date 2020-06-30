@@ -157,7 +157,7 @@ You will need to install Docker and Docker Compose if they are not installed.
 
 First, copy the source code to a folder on your Linux machine.
 
-Then open a terminal, go to that folder and run the following command:
+Then open a terminal, go to that folder (where the .sln file is located) and run the following command:
 
 ```
 docker-compose up
