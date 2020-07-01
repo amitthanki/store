@@ -22,26 +22,10 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
-  displayName: 'dotnet test'   
+  displayName: 'dotnet test'
 
-- task: DotNetCoreCLI@2
+- task: reportgenerator@4
   inputs:
-    command: custom
-    custom: tool
-    arguments: install dotnet-reportgenerator-globaltool -g
-  displayName: 'Install ReportGenerator Global Tool'
-
-- task: DotNetCoreCLI@2
-  inputs:
-    projects: 'test/**/*.csproj'
-    command: custom
-    custom: reportgenerator
-    arguments: '-reports:$(Build.SourcesDirectory)/test/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/CodeCoverage'
-  displayName: 'Generating code coverage report'  
-
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: Cobertura
-    summaryFileLocation: '$(Build.SourcesDirectory)/CodeCoverage/Cobertura.xml'
-    reportDirectory: '$(Build.SourcesDirectory)/CodeCoverage'
-  displayName: 'Publish code coverage'
+    reports: 'coverage.xml'
+    targetdir: 'coveragereport'
+  displayName: 'Gerenate coverage report'
