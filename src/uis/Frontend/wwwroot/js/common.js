@@ -2,7 +2,7 @@
     post: function (url, callback, errorCallback, content, token) {
         const xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
-            if (this.readyState === 4 && this.status === 200 && callback) {
+            if (this.readyState === 4 && this.status >= 200 && this.status < 300 && callback) {
                 callback(this.responseText);
             } else if (this.readyState === 4 && errorCallback) {
                 errorCallback();
@@ -23,7 +23,7 @@
     get: function (url, callback, errorCallback, token) {
         const xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
-            if (this.readyState === 4 && this.status === 200 && callback) {
+            if (this.readyState === 4 && this.status >= 200 && this.status < 300 && callback) {
                 callback(this.responseText);
             } else if (this.readyState === 4 && errorCallback) {
                 errorCallback();
@@ -43,7 +43,7 @@
     delete: function (url, callback, errorCallback, token) {
         const xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
-            if (this.readyState === 4 && this.status === 200 && callback) {
+            if (this.readyState === 4 && this.status >= 200 && this.status < 300 && callback) {
                 callback(this.responseText);
             } else if (this.readyState === 4 && errorCallback) {
                 errorCallback();
