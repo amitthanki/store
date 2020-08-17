@@ -12,7 +12,7 @@ steps:
    displayName: 'Build an image'
    inputs:
      containerregistrytype: 'container Registry'
-     dockerRegistryEndpoint: sqlgeordiedockerhub
+     dockerRegistryEndpoint: store docker hub
      imageName: 'amitthanki/azuredevops:$(Build.BuildId)'
      command: build an image
      dockerFile: '**/Dockerfile'
@@ -20,7 +20,7 @@ steps:
    displayName: Login
    inputs:
      containerregistrytype: 'container Registry'
-     dockerRegistryEndpoint: sqlgeordiedockerhub
+     dockerRegistryEndpoint: store docker hub
      command: login
  - task: Docker@1
    displayName: 'Push an image'
