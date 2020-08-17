@@ -8,13 +8,13 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY . ./
-RUN dotnet restore "BackendGateway.csproj"
+RUN dotnet restore BackendGateway
 COPY . .
 WORKDIR /src
-RUN dotnet build "BackendGateway.csproj" -c Release -o /app/build
+RUN dotnet build BackendGateway -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "BackendGateway.csproj" -c Release -o /app/publish
+RUN dotnet publish BackendGateway -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
