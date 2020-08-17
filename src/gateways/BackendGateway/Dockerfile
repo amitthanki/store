@@ -10,7 +10,7 @@ WORKDIR /src
 COPY . ./
 RUN dotnet restore "BackendGateway.csproj"
 COPY . .
-WORKDIR "/src"
+WORKDIR /src
 RUN dotnet build "BackendGateway.csproj" -c Release -o /app/build
 
 FROM build AS publish
