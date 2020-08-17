@@ -8,13 +8,22 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-    arguments: '--configuration $(buildConfiguration)'
-  displayName: 'dotnet build'
-  
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'test'
-  displayName: 'dotnet test'
+ - task: Docker@1 
+   displayName: 'Build an image'
+   inputs:
+     containerregistrytype: 'container Registry'
+     dockerRegistryEndpoint: sqlgeordiedockerhub
+     imageName: 'amitthanki/azuredevops:$(Build.BuildId)'
+     command: build an image
+     dockerFile: '**/Dockerfile'
+ - task: Docker@1
+   displayName: Login
+   inputs:
+     containerregistrytype: 'container Registry'
+     dockerRegistryEndpoint: sqlgeordiedockerhub
+     command: login
+ - task: Docker@1
+   displayName: 'Push an image'
+   inputs:
+     command: push an image
+     imageName: 'amitthanki/azuredevops:$(Build.BuildId)'
