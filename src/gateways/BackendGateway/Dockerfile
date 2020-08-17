@@ -7,7 +7,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY . ./
-RUN dotnet restore "Middleware.csproj"
+RUN dotnet restore "..\..\middlewares\Middleware\Middleware.csproj"
 RUN dotnet restore "BackendGateway.csproj"
 COPY ["./Middleware/", "Middleware/"]
 COPY ["./BackendGateway/", "BackendGateway/"]
